@@ -1,0 +1,189 @@
+<!doctype html>
+    <html>
+    <head>
+    <meta charset="utf-8">
+    <title>Documento sem título</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ 
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
+    
+    <!-- CSS dos keyframes e estilo dos links do menu -->
+    <link href="./css/myLightStyle.css" id="css-sheet" rel="stylesheet">
+    
+    <!-- Função para correr seta nos links do menu -->
+    <script src="./js/onLoad.js"></script>
+
+    </head>    
+    <body id="home" onload="getTheme()" class="container-fluid">
+
+        <!-- Botão de Retorno ao Topo -->
+        <div id="return-button" class="row">
+            <div class="row col-12">                
+                <div class="col-1">
+                    <a id ="btnReturn" onclick="returnToTop()" class="btn btn-primary"><i class="fas fa-arrow-up"></i></a>
+                </div>
+            </div>                
+        </div>
+        
+
+        <!-- Header com Barra roxa do header -->     
+        <header id="head-bar" class="container">            
+            <div class="row align-items-center mt-5">
+                <div class="col-12"></div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                    <div class="d-flex justify-content-end portfolio">
+                        <a href="#" class="headerLink">Portfolio</a>
+                    </div>                    
+                </div>
+                <div class="col-12 col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
+                    <div class="d-flex justify-content-center home">
+                        <a href="#" class="headerLink" style="font-weight: bolder;">Home</a>
+                    </div>                
+                </div>
+                <div class="col-12 col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                    <div class="d-flex justify-content-start curriculo">
+                        <a href="#" class="headerLink">Curriculo</a>
+                    </div>                
+                </div>
+                <div class="col-1 d-flex justify-content-start theme-btn">                    
+                    <label class="switch">
+                        <input type="checkbox" id="switchButton">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+
+                                        <!-- SETA -->          
+            <div class="container-fluid mt-4 row col-12 align-items-center">
+                <div id="setBar" class="w-25 py-2"></div>
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <div class="container mt-5">
+                    <div class="row p-4 banner">
+                        <!-- Painel Principal => Lado ESQUERDO -->
+                        <div class="row col-12 col-md-6 main-col-left">
+                            <div class="col-12 mt-4">
+                                <h2>Meus projetos</h2>
+                                <p class="mt-4 p-projects"> 
+                                    Estudante no curso Ciência da Computação.
+                                    Desenvolvedor de aplicações voltadas a automação, robótica.
+                                    Desenvolvedor de aplicações em C/C++, Python, Front-End e Mobile
+                                </p>
+                                <!-- Botão "CONHEÇA MAIS"-->
+                                <a href="#" class="btn btn-primary mt-1 a-know-more">Conheça meus projetos</a>        
+                            </div>
+                            <div class="col-6"></div>           
+                        </div>
+                        <!-- Painel Principal => Lado DIREITO -->
+                        <div class="container col-12 col-md-6 main-col-right">
+                            <div class="row">
+                                <div class="col-sm-12 d-flex justify-content-center">
+                                    <img class="img-fluid img-banner" src="./img/bg-img.png">
+                                </div>
+                                <div class="col-sm-12 d-flex justify-content-center">
+                                    <h3 class="text-under-banner">Let's build our future together</h3>                                    
+                                </div>
+                            </div>                         
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="container border-danger">
+                <div class="row">
+                    <h3 class="d-flex justify-content-center my-4 social-tips">Também estou aqui</h3>
+                    <div class="col-12 d-flex justify-content-center">
+                        <div class="col-4"></div>
+                        <!-- Redes Sociais -->
+                        <div class="row col-12 col-sm-4">
+                        <div class="col-4">
+                            <a class="d-flex justify-content-end text-decoration-none" target="_blank"  href="https://bit.ly/danilodutralinkedin">
+                                <i class="fab fa-linkedin fa-3x social-buttons"></i>
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            <a class="d-flex justify-content-center text-decoration-none" target="_blank" href="https://bit.ly/danilodutragithub">
+                                <i class="fab fa-github-alt fa-3x social-buttons"></i>
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            <a class="d-flex justify-content-start text-decoration-none" target="_blank"  href="mailto:danilo.dutra1444@gmail.com">
+                                <i class="fas fa-envelope-open-text fa-3x social-buttons"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-4">                        
+                    </div>
+                </div>
+                <!-- CONHEÇA MEUS PROJETOS -->
+                    <div class="col-12 d-flex justify-content-center mt-5">
+                        <h2 class="project-tips">Um breve resumo dos meus projetos</h2>
+                    </div>
+                </div>
+
+                        <!-- 4 PROJETOS PRINCIPAIS -->
+                <div class="row mt-4">
+                    <div class=""></div>
+                        <div class="col-12 col-sm-3 mt-3">
+                            <span class="mx-5 d-flex justify-content-center align-items-center projects">Homatic</span>
+                            <p class="mt-4 p-projects">
+                                Projeto com temática de uso Mobile.
+                                <br>
+                                Aplicação voltada a automação residencial e pessoal.
+                                Contém um app mobile para Android, Hardware Embarcado
+                                e WebServer desenvolvido utilizando HTML/CSS, Bootstrap e Javascript.
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-3 mt-3">
+                            <span class="mx-5 d-flex justify-content-center align-items-center projects">Stop, Think & Go</span>
+                            <p class="mt-4 p-projects">
+                                Projeto inspirado em Sistemas Distribuidos.
+                                <br>
+                                Protótipo de carro automatizado, que se comunica em uma sistema
+                                de trânsito em rede IOT.
+                                Utiliza-se de comunicação Serial Síncrona, em dois sistemas 
+                                projetados um para cada hardware, criando assim um 
+                                Sistema Distribuido.
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-3 mt-3">
+                            <span class="mx-5 d-flex justify-content-center align-items-center projects">Wiiz Home</span>
+                            <p class="mt-4 p-projects">
+                                Projeto com temática em Aquisição de Sinal Analógico
+                                <br>
+                                Voltado a automação residencial, utiliza-se de sensores 
+                                de proximidade (ultrassônico), luminosidade e Gás.
+                                Conta também com um display, onde todas as informações 
+                                são atualizadas para maior facilidade do usuário.
+                            </p>
+                        </div>
+                        <div class="col-12 col-sm-3 mt-3">
+                            <span class="mx-5 d-flex justify-content-center align-items-center projects">Your Helper</span>
+                            <p class="mt-4 p-projects">
+                                Software auxiliar em Help Desk 1º Nível que desenvolvi 
+                                para o uso dos estagiários 1º Nível na Assessória de 
+                                Informática da Prefeitura de São José dos Campos
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>        
+    </body>
+</html>

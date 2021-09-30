@@ -1,0 +1,235 @@
+body {
+    background-color:#000;
+}
+header {
+    border-bottom: 0.5em #007CFF solid!important; 
+    width: 80%;
+}
+h2, h3 {
+    color: #007CFF; 
+    font-weight: 500; 
+    letter-spacing: 0.07em;
+}
+h4 {
+    color: #007CFF; 
+    font-weight: 500;
+    font-size: 1.8em; 
+    letter-spacing: 0.1em
+}
+.banner {
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 0.85em;
+}
+.img-banner {
+    width: 60%;
+}
+.text-under-banner {
+    color: #FFF;
+}
+.a-know-more {
+    border-radius: 1em; 
+    background-color: #007CFF; 
+    font-weight: 600; 
+    font-size: 1.1em;
+}
+.headerLink {
+    /*color: #4306F1;*/
+    transition: 2s;
+    color: #FFF;
+    text-decoration: none!important;      
+    font-size: 30px;      
+    font-weight: 400;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /*
+    animation-duration: 3s;
+    animation-name: slideDown;
+    animation-iteration-count: 1;
+    */
+}
+.headBar {
+    /*border-bottom: 0.5em #4306F1 solid!important; */
+    border-bottom: 0.5em #FFF solid!important; 
+    width: 80%;
+}
+.social-buttons {  
+    color: #FFF;
+    transition: 2s;
+}
+.social-buttons:hover {  
+    color: #007CFF;
+    transition: 1.5s;
+}
+.projects {
+    background-color: #007CFF; 
+    opacity: 0.8; 
+    color:#FFF; 
+    font-size: 1.1em; 
+    font-weight: 600; 
+    border-radius: 0.3em;
+}
+.projects:hover {
+    background-color: #FFF; 
+    opacity: 1; 
+    transition: 1.5s;
+    color:#000; 
+    font-size: 1.2em; 
+    font-weight: 600; 
+    border-radius: 0.3em;
+}
+.p-projects {
+    font-weight: 600; 
+    letter-spacing: 0.1em;
+    color: #FFF;
+}
+.project-tips, .social-tips, .text-under-banner {
+    transition: 2s;
+    color: #FFF;
+}
+.project-tips:hover, .social-tips:hover, .text-under-banner:hover {
+    transition: 3s;
+    color: #007CFF;    
+}
+.text-blue {
+    color: #007CFF;    
+}
+#btnReturn {
+    transition: 1.5s;
+    visibility: hidden;
+    position: fixed;
+    top: 90%;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #ccc;
+    color: #0A5CAE;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+}
+#btnReturn:hover {
+    transition: 1.5s;
+    background-color: #007CFF;
+    color:#FFF;    
+}
+@keyframes slideDown {
+from {
+    margin-top: -80px;
+}
+to {
+    margin-top: -0px;
+    }
+}
+a:hover.headerLink {
+    color:#007CFF;  
+    transition: 2s;           
+}
+a:active.headerLink {
+    color:#007CFF!important;
+    transition: 2s;          
+}
+
+.removeAnimation {
+    animation: none!important;        
+}                 
+.portfolioInitial, .homeInitial, .curriculoInitial {
+    background-image: url(/HTML-CSS-Javascript/projeto_tela_login/img/seta.png);
+    background-repeat: no-repeat;
+    animation: none;
+}
+
+@keyframes portfolioInitialAnimation {
+    from {
+        margin-left: 0%;
+    }
+    to {
+        margin-left: 24%;
+    }
+}
+.portfolioInitial {
+    animation-name: portfolioInitialAnimation;
+    animation-duration: 2s;
+    margin-left: 24%;
+    margin-bottom: 0;
+    margin-top: 0%;
+}
+
+@keyframes homeInitialAnimation {
+    from {
+        margin-left: 0%;
+    }
+    to {
+        margin-left: 37.5%;
+    }
+}
+.homeInitial {            
+    animation-name: homeInitialAnimation;
+    animation-duration: 2s;
+    margin-left: 37.5%;
+}
+
+@keyframes curriculoInitialAnimation {
+    from {
+        margin-left: 0%;
+    }
+    to {
+        margin-left: 52%;
+    }
+}
+.curriculoInitial {            
+    animation-name: curriculoInitialAnimation;
+    animation-duration: 2s;
+    margin-left: 52%;
+}
+
+/* Botão Dark/Light*/
+.switch {
+position: relative;
+display: inline-block;
+width: 60px;
+height: 34px;
+}
+
+.switch input { 
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+.slider:before {
+position: absolute;
+content: "";
+height: 26px;
+width: 26px;
+left: 4px;
+bottom: 4px;
+background-color: white;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+input:checked + .slider {
+background-color: #2196F3;
+}
+
+input:focus + .slider {
+box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+-webkit-transform: translateX(26px);
+-ms-transform: translateX(26px);
+transform: translateX(26px);
+}
