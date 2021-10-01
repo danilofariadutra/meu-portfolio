@@ -318,6 +318,7 @@ transform: translateX(26px);
         /*font-size: 2vw;*/
         margin-left: 7vw;
         margin-right: 7vw;
+        font-size: 2vw !important;
     }
     /*Theme Button Switch */
     .switch {
