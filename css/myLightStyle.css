@@ -237,9 +237,24 @@ transform: translateX(26px);
 
 /* Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) { 
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        overflow-x: hidden !important;
 
-    #return-button {
-        visibility: hidden;
+    }
+    
+    .container {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+        overflow-y: hidden !important;
+    }
+
+    #return-button, #btnReturn, .theme-btn, .main-col-right {
+        visibility: hidden !important;
     }        
     .portfolio, .home, .curriculo {
         display: flex !important;
@@ -247,14 +262,11 @@ transform: translateX(26px);
     }
 
     #head-bar {
-        height: 35vh !important;
+        height: 25vh !important;
     }
     
     .banner {
-        height: 60vh;
-    }
-    .theme-btn {
-        visibility: hidden;
+        height: 45vh;
     }
 
     .main-col-left {
@@ -262,25 +274,115 @@ transform: translateX(26px);
         justify-content: center !important;
     }
 
-    .main-col-right {
-        visibility: hidden !important;
+    .project-tips {
+        font-size: 2.8vh;
     }
+
+    .p-projects {
+        /*font-size: 2vw;*/
+        margin-left: 9vw;
+        margin-right: 9vw;
+    }  
  }
 
 /* Small devices (landscape phones, less than 768px)*/
-@media (max-width: 767.98px) { 
+@media (min-width: 576px) and (max-width: 767.98px) {
+    #return-button, #btnReturn, .theme-btn, .main-col-right {
+        visibility: hidden !important;
+    }  
+    .portfolio, .home, .curriculo {
+        display: flex !important;
+        justify-content: center !important;        
+    }
 
+    #head-bar {
+        height: 20vh !important;
+    }
+    .banner {
+        height: 40vh;
+    }
+    .project-tips {
+        font-size: 3.2vh;
+    }
+    .p-projects {
+        /*font-size: 2vw;*/
+        margin-left: 9vw;
+        margin-right: 9vw;
+    }
  }
 
 /* Medium devices (tablets, less than 992px)*/
-@media (max-width: 991.98px) { 
+@media (min-width: 768px) and (max-width: 999.98px) { 
 
+    .p-projects {
+        /*font-size: 2vw;*/
+        margin-left: 7vw;
+        margin-right: 7vw;
+    }
+    /*Theme Button Switch */
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 30px;
+        }
+        
+    .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+    }
+    
+    .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    }
+    
+    .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    }
+    
+    input:checked + .slider {
+    background-color: #2196F3;
+    }
+    
+    input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+    }
+    
+    input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    }
  }
 
 /* Large devices (desktops, less than 1200px)*/
-@media (max-width: 1199.98px) { 
-
+@media (min-width: 1000px) and (max-width: 1199px) { 
+    .project-tips {
+        font-size: 3.5vh;
+    }
+    .p-projects {
+        /*font-size: 2vw;*/
+        margin-left: 5vw;
+        margin-right: 5vw;        
+    }
+    .projects {
+        width: 15vw;
+    }
 }
-
-/* Extra large devices (large desktops)
-// No media query since the extra-large breakpoint has no upper bound on its width */
