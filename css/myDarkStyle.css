@@ -265,7 +265,7 @@ transform: translateX(26px);
     }
     
     .banner {
-        height: 45vh;
+        height: auto;
     }
 
     .main-col-left {
