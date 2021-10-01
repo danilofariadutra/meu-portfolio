@@ -192,59 +192,91 @@ to {
     }
     
 .switch input { 
-opacity: 0;
-width: 0;
-height: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
 .slider {
-position: absolute;
-cursor: pointer;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background-color: #ccc;
--webkit-transition: .4s;
-transition: .4s;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
 }
 
 .slider:before {
-position: absolute;
-content: "";
-height: 26px;
-width: 26px;
-left: 4px;
-bottom: 4px;
-background-color: white;
--webkit-transition: .4s;
-transition: .4s;
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
 }
 
 input:checked + .slider {
-background-color: #2196F3;
+    background-color: #2196F3;
 }
 
 input:focus + .slider {
-box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px #2196F3;
 }
 
 input:checked + .slider:before {
--webkit-transform: translateX(26px);
--ms-transform: translateX(26px);
-transform: translateX(26px);
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
 }
 
 /* Extra small devices (portrait phones, less than 576px)*/
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+    
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    main, section {
+        visibility: hidden;
+        height: 0;
+    }
+    header div.row.align-items-center.mt-5 {
+        margin-top: 0 !important;
+    }
+    header {
+        border-bottom: none !important;        
+        visibility: visible !important;
+        display: inline !important;
+        text-decoration: none !important;   
+    }  
+
+    footer {        
+        margin-top: -18vh !important;
+    }
+    #head-bar {
+        border: none;
+    }
+
+    .project-tips {
+        font-size: 3.3vw !important;
+    }
+}
+
 @media (max-width: 575.98px) { 
     * {
         margin: 0;
         padding: 0;
     }
-    
+
     body {
         overflow-x: hidden !important;
-
     }
     
     .container {
@@ -253,9 +285,48 @@ transform: translateX(26px);
         overflow-y: hidden !important;
     }
 
-    #return-button, #btnReturn, .theme-btn, .main-col-right {
+    #return-button, #btnReturn, .main-col-right {
         visibility: hidden !important;
-    }        
+    }    
+    
+    /*Theme Button Switch */
+    .switch {
+        width: 20px;
+        height: 20px;
+        color: #000 !important;
+    }
+
+    .slider {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0) !important; 
+    }
+    
+    .slider:before {
+        height: 29px;
+        width: 20px;
+        left: 0px;
+        bottom: 12px;
+        background-color: rgba(0, 0, 0, 0) !important;
+        background-image: url("../img/icon/light-on.png");
+    }
+
+    input:checked + .slider {
+        background-color: rgba(0, 0, 0, 0) !important;
+    }
+    
+    input:focus + .slider {
+        box-shadow: 0 rgba(0, 0, 0, 0) !important;
+    }
+
+    input:checked + .slider:before {
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+    }
+
     .portfolio, .home, .curriculo {
         display: flex !important;
         justify-content: center !important;        
@@ -270,7 +341,7 @@ transform: translateX(26px);
     }
 
     .banner {
-        height: 55vh;        
+        height: 35vh;        
     }
 
     .main-col-left {
@@ -289,9 +360,11 @@ transform: translateX(26px);
         margin-right: 9vw;
     }
     .about-me {
-        font-size: 2.5vh;
+        color: #000;
+        font-size: 2vh !important;
         margin: 0 !important;
         text-align: initial;
+        padding-bottom: 2vh;
     }  
 }
 
