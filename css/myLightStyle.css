@@ -265,25 +265,35 @@ transform: translateX(26px);
         height: 25vh !important;
     }
     
+    .headerLink {
+        font-size: 3vh;
+    }
+
     .banner {
-        height: 45vh;
+        height: 55vh;        
     }
 
     .main-col-left {
+        margin-top: -6vh !important;
         display: flex!important;
         justify-content: center !important;
     }
 
     .project-tips {
-        font-size: 2.8vh;
+        font-size: 2.5vh;
     }
 
     .p-projects {
         /*font-size: 2vw;*/
         margin-left: 9vw;
         margin-right: 9vw;
+    }
+    .about-me {
+        font-size: 2.5vh;
+        margin: 0 !important;
+        text-align: initial;
     }  
- }
+}
 
 /* Small devices (landscape phones, less than 768px)*/
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -309,7 +319,7 @@ transform: translateX(26px);
         margin-left: 9vw;
         margin-right: 9vw;
     }
- }
+}
 
 /* Medium devices (tablets, less than 992px)*/
 @media (min-width: 768px) and (max-width: 999.98px) { 
@@ -325,52 +335,15 @@ transform: translateX(26px);
         display: inline-block;
         width: 50px;
         height: 30px;
-        }
-        
-    .switch input { 
-    opacity: 0;
-    width: 0;
-    height: 0;
-    }
-    
-    .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
     }
     
     .slider:before {
-    position: absolute;
-    content: "";
-    height: 20px;
-    width: 16px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
+        height: 20px;
+        width: 16px;
+        left: -10px;
+        bottom: 4px;
     }
-    
-    input:checked + .slider {
-    background-color: #2196F3;
-    }
-    
-    input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-    }
-    
-    input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-    }
- }
+}
 
 /* Large devices (desktops, less than 1200px)*/
 @media (min-width: 1000px) and (max-width: 1199px) { 
@@ -384,5 +357,18 @@ transform: translateX(26px);
     }
     .projects {
         width: 15vw;
+    }
+
+    /*Theme Button Switch */
+    .switch {
+        width: 60px;
+        height: 34px;
+    }
+
+    .slider:before {
+        height: 26px;
+        width: 26px;
+        left: 0px;
+        bottom: 4px;
     }
 }
